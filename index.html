@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Técnico-Económica – Sistema de Gestión de Citas con Chatbot e Inteligencia Artificial</title>
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  :root {
+    --ink: #1f2933;
+    --muted: #52606d;
+    --accent: #1d3557;
+    --line: #d9dee4;
+    --soft: #f4f6f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9ecef;
+    color: var(--ink);
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 210mm;
+    margin: 24px auto;
+    background: #fff;
+    padding: 22mm 20mm;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
+  }
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--accent);
+    font-size: 20pt;
+    line-height: 1.25;
+    margin: 0 0 6px;
+  }
+  .subtitle { color: var(--muted); margin: 0; }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--accent);
+    font-size: 14pt;
+    margin: 28px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  h3 { font-size: 11.5pt; margin: 18px 0 6px; color: var(--ink); }
+  p { margin: 0 0 10px; text-align: justify; }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 14px;
+    font-size: 10.5pt;
+  }
+  th, td {
+    border: 1px solid var(--line);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--accent); color: #fff; font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  tr.total td { background: var(--soft); font-weight: 700; }
+  .price-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 12px 0 6px;
+  }
+  .card {
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--accent);
+    padding: 14px 16px;
+    background: var(--soft);
+  }
+  .card .label { font-size: 9.5pt; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .card .name { font-weight: 700; margin: 2px 0 8px; }
+  .card .amount { font-size: 17pt; font-weight: 700; color: var(--accent); }
+  .card .note { font-size: 9.5pt; color: var(--muted); }
+  .small { font-size: 9.5pt; color: var(--muted); }
+  .signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 48px;
+  }
+  .signature div { border-top: 1px solid var(--ink); padding-top: 6px; font-size: 10pt; }
+  .placeholder { background: #fff6d6; padding: 0 3px; }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; padding: 0; box-shadow: none; max-width: none; }
+    .placeholder { background: none; }
+    h2 { page-break-after: avoid; }
+    table, .card { page-break-inside: avoid; }
+  }
+  @media (max-width: 640px) {
+    .page { padding: 18px; }
+    .price-box, .signature { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="meta">
+    <span>Propuesta N.º <span class="placeholder">[000-2026]</span></span>
+    <span>Lima, 25 de noviembre de 2026</span>
+  </div>
+  <h1>Propuesta Técnico-Económica<br>Sistema de Gestión de Citas con Chatbot e Inteligencia Artificial</h1>
+  <p class="subtitle">Dirigida a: <span class="placeholder">[Nombre de la clínica]</span> &nbsp;·&nbsp; Presentada por: <span class="placeholder">[Nombre o razón social del proveedor]</span></p>
+</header>
+
+<h2>1. Presentación</h2>
+<p>Por medio del presente documento, ponemos a consideración de <span class="placeholder">[Nombre de la clínica]</span> (en adelante, «la Clínica») nuestra propuesta para la implementación de un sistema de gestión de citas médicas que permita a sus pacientes agendar, consultar, reprogramar y cancelar citas las 24 horas del día a través de WhatsApp, con el apoyo de un asistente de inteligencia artificial.</p>
+<p>Con el fin de adaptarnos a las necesidades de la Clínica, presentamos dos modalidades de contratación: una de <strong>desarrollo exclusivo</strong>, con pago único y propiedad del sistema, y otra de <strong>servicio por suscripción</strong>, con una inversión inicial reducida y un pago mensual. Ambas contemplan un periodo de prueba de tres (3) meses en operación real.</p>
+
+<h2>2. Resumen de la propuesta</h2>
+<div class="price-box">
+  <div class="card">
+    <div class="label">Modalidad A</div>
+    <div class="name">Desarrollo exclusivo</div>
+    <div class="amount">S/ 45,500</div>
+    <div class="note">Pago único, IGV incluido. El sistema y su código fuente son propiedad de la Clínica.</div>
+  </div>
+  <div class="card">
+    <div class="label">Modalidad B</div>
+    <div class="name">Servicio por suscripción</div>
+    <div class="amount">S/ 2,100 <span style="font-size:11pt">/ mes</span></div>
+    <div class="note">IGV incluido, más una implementación única de S/ 8,800 (IGV incluido).</div>
+  </div>
+</div>
+<p class="small">Plazo de implementación en ambas modalidades: doce (12) semanas desde la firma del contrato. Todos los montos se expresan en soles.</p>
+
+<h2>3. Alcance de la solución</h2>
+<p>Ambas modalidades incluyen las siguientes funcionalidades:</p>
+<ol>
+  <li><strong>Chatbot en WhatsApp</strong> mediante la API oficial de Meta, con menús y botones para agendar, consultar, reprogramar y cancelar citas.</li>
+  <li><strong>Asistente con inteligencia artificial</strong> capaz de interpretar mensajes en lenguaje natural y ofrecer únicamente los horarios realmente disponibles. El asistente no emite diagnósticos ni recomendaciones médicas; ante síntomas de urgencia, indica acudir a emergencias y deriva la conversación al personal.</li>
+  <li><strong>Atención de consultas frecuentes:</strong> especialidades, médicos, horarios de atención, tarifas, dirección y formas de pago.</li>
+  <li><strong>Recordatorios automáticos</strong> el día previo a la cita, con opciones para confirmar, reprogramar o cancelar.</li>
+  <li><strong>Panel web para recepción</strong>, accesible desde computadora y celular: agenda diaria y semanal, registro manual de citas, gestión de pacientes, médicos, horarios y bloqueos.</li>
+  <li><strong>Derivación a personal humano</strong> en cualquier momento de la conversación.</li>
+  <li><strong>Protección de datos personales</strong> conforme a la Ley N.º 29733: registro del consentimiento del paciente y almacenamiento limitado a la información necesaria para la gestión de citas.</li>
+</ol>
+
+<h2>4. Modalidad A – Desarrollo exclusivo</h2>
+<p>La Clínica adquiere un sistema desarrollado exclusivamente para su uso, desplegado en su propia cuenta de servicios en la nube, con transferencia total del código fuente y de los derechos de uso y modificación.</p>
+<table>
+  <tr><th>Concepto</th><th class="num">Monto (IGV incluido)</th></tr>
+  <tr class="total"><td>Desarrollo e implementación del sistema</td><td class="num">S/ 45,500</td></tr>
+</table>
+<h3>Incluye</h3>
+<ul>
+  <li>Código fuente y propiedad del sistema a favor de la Clínica.</li>
+  <li>Despliegue en producción, manual de uso y dos (2) sesiones de capacitación.</li>
+  <li>Garantía de tres (3) meses, que coincide con el periodo de prueba.</li>
+</ul>
+<h3>Forma de pago</h3>
+<table>
+  <tr><th>Hito</th><th class="num">%</th><th class="num">Monto</th></tr>
+  <tr><td>Firma del contrato</td><td class="num">30%</td><td class="num">S/ 13,650</td></tr>
+  <tr><td>Demostración integral en entorno de pruebas (semana 9)</td><td class="num">40%</td><td class="num">S/ 18,200</td></tr>
+  <tr><td>Puesta en producción</td><td class="num">20%</td><td class="num">S/ 9,100</td></tr>
+  <tr><td>Cumplimiento de tres (3) meses de operación</td><td class="num">10%</td><td class="num">S/ 4,550</td></tr>
+  <tr class="total"><td>Total</td><td class="num">100%</td><td class="num">S/ 45,500</td></tr>
+</table>
+<h3>Servicios opcionales</h3>
+<table>
+  <tr><th>Servicio</th><th class="num">Monto (IGV incluido)</th></tr>
+  <tr><td>Integración del canal Facebook Messenger</td><td class="num">S/ 5,300 (pago único)</td></tr>
+  <tr><td>Soporte y mantenimiento posterior a la garantía (hasta 12 horas al mes)</td><td class="num">S/ 1,050 mensuales</td></tr>
+</table>
+
+<h2>5. Modalidad B – Servicio por suscripción</h2>
+<p>La Clínica accede al sistema bajo una licencia de uso, configurado con su información, sin asumir el costo total del desarrollo. La mensualidad cubre la infraestructura, la inteligencia artificial, el soporte y las mejoras que se incorporen a la plataforma.</p>
+<table>
+  <tr><th>Concepto</th><th class="num">Monto (IGV incluido)</th></tr>
+  <tr><td>Implementación (pago único)</td><td class="num">S/ 8,800</td></tr>
+  <tr><td>Mensualidad</td><td class="num">S/ 2,100</td></tr>
+  <tr><td>Mensualidad en plan anual (a partir del séptimo mes)</td><td class="num">S/ 1,900</td></tr>
+</table>
+<h3>La implementación incluye</h3>
+<ul>
+  <li>Alta del número de WhatsApp y gestión de plantillas de mensajes ante Meta.</li>
+  <li>Carga de médicos, especialidades, horarios y preguntas frecuentes.</li>
+  <li>Dos (2) sesiones de capacitación.</li>
+</ul>
+<h3>La mensualidad incluye</h3>
+<ul>
+  <li>Servidores, base de datos y copias de seguridad diarias.</li>
+  <li>Consumo de inteligencia artificial hasta 1,000 conversaciones al mes.</li>
+  <li>Soporte técnico hasta seis (6) horas al mes y monitoreo permanente.</li>
+  <li>Actualizaciones y nuevas funcionalidades de la plataforma.</li>
+</ul>
+<h3>Condiciones</h3>
+<ul>
+  <li>Permanencia mínima de tres (3) meses, correspondiente al periodo de prueba. Posteriormente, el servicio continúa mes a mes con aviso de cancelación de treinta (30) días, o bajo plan anual.</li>
+  <li>El código fuente pertenece al proveedor; la Clínica cuenta con licencia de uso mientras el servicio se encuentre vigente.</li>
+  <li>La información de pacientes y citas es propiedad de la Clínica y le será entregada en formato exportable en caso de término del servicio.</li>
+  <li>La personalización se realiza mediante configuración. Los desarrollos a medida se cotizan por separado.</li>
+  <li>El canal Facebook Messenger se habilitará sin costo de implementación cuando sea incorporado a la plataforma.</li>
+</ul>
+<h3>Forma de pago</h3>
+<p>La implementación se abona en dos partes: 50% a la firma del contrato y 50% a la puesta en producción. La primera mensualidad se factura al inicio de la operación.</p>
+
+<h2>6. Comparativo de inversión</h2>
+<table>
+  <tr><th>Escenario</th><th class="num">Primer año</th><th class="num">Tres años</th></tr>
+  <tr><td>Modalidad A con soporte mensual</td><td class="num">S/ 58,550</td><td class="num">S/ 90,950</td></tr>
+  <tr><td>Modalidad A sin soporte mensual</td><td class="num">S/ 49,100</td><td class="num">S/ 56,300</td></tr>
+  <tr><td>Modalidad B, mes a mes</td><td class="num">S/ 34,000</td><td class="num">S/ 84,400</td></tr>
+  <tr><td>Modalidad B con plan anual desde el séptimo mes</td><td class="num">S/ 32,800</td><td class="num">S/ 78,400</td></tr>
+</table>
+<p class="small">Montos referenciales. Incluyen el IGV de nuestros servicios y, en la Modalidad A, un estimado de S/ 300 mensuales por infraestructura e inteligencia artificial. No incluyen el costo de mensajería de WhatsApp, que es equivalente en ambas modalidades.</p>
+
+<h2>7. Cronograma de implementación</h2>
+<table>
+  <tr><th>Semanas</th><th>Actividad</th></tr>
+  <tr><td>1 – 2</td><td>Levantamiento de requisitos, diseño de flujos, verificación de la empresa ante Meta y envío de plantillas a aprobación.</td></tr>
+  <tr><td>2 – 6</td><td>Desarrollo de la base de datos, servicios principales, panel web y chatbot de WhatsApp.</td></tr>
+  <tr><td>6 – 9</td><td>Asistente de inteligencia artificial y recordatorios automáticos. Demostración integral en la semana 9.</td></tr>
+  <tr><td>10 – 11</td><td>Pruebas con el personal de la Clínica y correcciones.</td></tr>
+  <tr><td>12</td><td>Puesta en producción, carga de información real y capacitación.</td></tr>
+  <tr><td>13 – 24</td><td>Periodo de prueba en operación real.</td></tr>
+</table>
+<p>Durante el periodo de prueba se evaluarán indicadores acordados al inicio del proyecto, tales como el porcentaje de citas agendadas por el chatbot, la tasa de confirmación de recordatorios y la reducción de inasistencias.</p>
+
+<h2>8. Costos de operación a cargo de la Clínica</h2>
+<p>Los siguientes servicios son facturados directamente por cada proveedor a la Clínica:</p>
+<table>
+  <tr><th>Concepto</th><th class="num">Estimado mensual</th><th>Aplica a</th></tr>
+  <tr><td>Mensajería de WhatsApp (tarifa por mensaje de Meta)</td><td class="num">S/ 250 – 550</td><td>Modalidades A y B</td></tr>
+  <tr><td>Servidores, base de datos y dominio</td><td class="num">S/ 180</td><td>Modalidad A</td></tr>
+  <tr><td>Consumo del modelo de inteligencia artificial</td><td class="num">S/ 70 – 170</td><td>Modalidad A</td></tr>
+</table>
+<p class="small">El costo de mensajería depende del volumen de conversaciones y de las tarifas vigentes de Meta, que pueden variar trimestralmente.</p>
+
+<h2>9. Supuestos y exclusiones</h2>
+<h3>Supuestos</h3>
+<ul>
+  <li>La Clínica cuenta, o gestionará, una cuenta de Meta Business verificada y un número de WhatsApp a su nombre.</li>
+  <li>La Clínica proporcionará oportunamente la información de médicos, especialidades, horarios, tarifas y preguntas frecuentes.</li>
+  <li>La Clínica designará a una persona de contacto para validar flujos y participar en las pruebas.</li>
+  <li>Volumen de referencia: hasta 400 citas mensuales y 10 médicos.</li>
+</ul>
+<h3>No incluye</h3>
+<ul>
+  <li>Historia clínica electrónica, facturación electrónica, pagos en línea ni integración con aseguradoras.</li>
+  <li>Reportes o tableros avanzados.</li>
+  <li>Aplicación móvil nativa (el panel web es compatible con dispositivos móviles).</li>
+</ul>
+<p>Los plazos de aprobación de Meta (verificación de la empresa y plantillas de mensajes) no dependen del proveedor. Por ello, dichos trámites se inician en la primera semana y el desarrollo avanza en paralelo con un número de prueba.</p>
+
+<h2>10. Vigencia</h2>
+<p>La presente propuesta tiene una vigencia de treinta (30) días calendario a partir de su fecha de emisión. Quedamos a su disposición para cualquier consulta o aclaración.</p>
+
+<p>Atentamente,</p>
+
+<div class="signature">
+  <div><span class="placeholder">[Nombre del responsable]</span><br><span class="placeholder">[Cargo]</span><br><span class="placeholder">[Nombre o razón social del proveedor]</span><br><span class="placeholder">[Correo] · [Teléfono]</span></div>
+  <div>Conformidad de la Clínica<br><span class="placeholder">[Nombre y cargo]</span><br>Fecha: ____ / ____ / ________</div>
+</div>
+
+</div>
+</body>
+</html>
