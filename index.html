@@ -103,6 +103,11 @@
   .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
   .plan { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; box-shadow: var(--shadow); position: relative; }
   .plan.featured { border: 2px solid var(--teal); }
+  .opt { font-size: 13px; font-weight: 700; color: var(--navy); margin: 12px 0 4px; }
+  .compare td.hl, .compare th.hl { background: var(--teal-soft); font-weight: 700; color: var(--navy); }
+  .compare th.hl { background: var(--teal); color: #fff; }
+  .callout { margin: 26px auto 0; max-width: 760px; text-align: center; background: var(--teal-soft); border: 1px solid #bfe9e2; border-radius: var(--radius); padding: 20px 26px; color: var(--navy); font-size: 17px; }
+  .callout strong { color: var(--teal); }
   .badge { position: absolute; top: -13px; left: 36px; background: var(--teal); color: #fff; font-size: 12.5px; font-weight: 700; padding: 4px 12px; border-radius: 999px; letter-spacing: .03em; }
   .plan .tag { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--teal); }
   .plan h3 { font-size: 24px; color: var(--navy); margin: 6px 0 8px; }
@@ -291,22 +296,29 @@
     </div>
     <div class="plans">
 
-      <div class="plan">
+      <div class="plan featured">
         <span class="tag">Plan A</span>
         <h3>Desarrollo exclusivo</h3>
-        <p class="desc">Un sistema propio, hecho solo para su clínica, con el código fuente de su propiedad.</p>
+        <p class="desc">El sistema es suyo: hecho para su clínica, sin pagos de alquiler. Puede pagarlo en cuotas sin intereses.</p>
         <div class="price">S/ 45,500</div>
-        <p class="price-note">Pago único · IGV incluido</p>
+        <p class="price-note">IGV incluido · Pago por hitos o en cuotas</p>
         <ul class="checklist">
           <li>Todas las funcionalidades de la solución</li>
-          <li>Código fuente y propiedad del sistema</li>
+          <li>Código fuente de su sistema, con derechos ilimitados de uso y modificación</li>
+          <li>Pago en cuotas sin intereses</li>
           <li>Integración con su cuenta de Meta, página de Facebook y número de WhatsApp</li>
           <li>Servidores, IA y mensajería incluidos durante los 3 meses de prueba</li>
           <li>Garantía de 3 meses</li>
           <li>Manual de uso y 2 capacitaciones</li>
         </ul>
         <div class="plan-sub">
-          <h4>Forma de pago</h4>
+          <h4>Forma de pago (a elección de la clínica)</h4>
+          <p class="opt">Opción 1 · En cuotas sin intereses</p>
+          <table class="mini">
+            <tr><td>30% a la firma del contrato</td><td>S/ 13,650</td></tr>
+            <tr><td>7 cuotas mensuales desde la demostración (semana 9)</td><td>S/ 4,550 c/u</td></tr>
+          </table>
+          <p class="opt">Opción 2 · Por hitos</p>
           <table class="mini">
             <tr><td>30% a la firma del contrato</td><td>S/ 13,650</td></tr>
             <tr><td>40% en la demostración (semana 9)</td><td>S/ 18,200</td></tr>
@@ -319,9 +331,9 @@
       <div class="plan">
         <span class="tag">Plan B</span>
         <h3>Servicio por suscripción</h3>
-        <p class="desc">Acceda a la plataforma configurada con su información, con todo incluido en un pago mensual.</p>
-        <div class="price">S/ 2,500 <small>/ mes</small></div>
-        <p class="price-note">IGV incluido · Implementación única de S/ 12,000</p>
+        <p class="desc">Licencia de uso de la plataforma, configurada con su información, con todo incluido en un pago mensual.</p>
+        <div class="price">S/ 2,900 <small>/ mes</small></div>
+        <p class="price-note">IGV incluido · Implementación de S/ 18,000 · Contrato mínimo de 12 meses</p>
         <ul class="checklist">
           <li>Todas las funcionalidades de la solución</li>
           <li>Integración con su cuenta de Meta, página de Facebook y número de WhatsApp</li>
@@ -333,9 +345,8 @@
         <div class="plan-sub">
           <h4>Inversión</h4>
           <table class="mini">
-            <tr><td>Implementación (50% a la firma, 50% en producción)</td><td>S/ 12,000</td></tr>
-            <tr><td>Mensualidad</td><td>S/ 2,500</td></tr>
-            <tr><td>Mensualidad en plan anual (desde el mes 7)</td><td>S/ 2,300</td></tr>
+            <tr><td>Implementación (50% a la firma, 50% en producción)</td><td>S/ 18,000</td></tr>
+            <tr><td>Mensualidad (contrato mínimo de 12 meses)</td><td>S/ 2,900</td></tr>
           </table>
         </div>
       </div>
@@ -348,6 +359,10 @@
         <span>Plan de operación y soporte<em>Desde el mes 4: servidores, IA, mensajería de WhatsApp hasta 5,000 mensajes y soporte hasta 10 horas al mes</em></span>
         <span>S/ 1,500 / mes</span>
       </div>
+      <div class="addon-row">
+        <span>Plan de operación y soporte anual<em>Las mismas condiciones, con contrato de 12 meses</em></span>
+        <span>S/ 1,200 / mes</span>
+      </div>
     </div>
   </div>
 </section>
@@ -356,18 +371,18 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Comparativo</span>
-      <h2>Inversión total estimada</h2>
-      <p>Estimado del costo total de cada plan a uno y tres años.</p>
+      <h2>Con el Plan A, el sistema es suyo. Con el Plan B, lo alquila.</h2>
+      <p>El primer año ambos planes cuestan lo mismo. Desde el segundo año, el Plan A resulta considerablemente más económico.</p>
     </div>
     <div class="table-wrap">
       <table class="compare">
-        <tr><th>Escenario</th><th class="num">Primer año</th><th class="num">Tres años</th></tr>
-        <tr><td>Plan A con plan de operación y soporte</td><td class="num">S/ 59,000</td><td class="num">S/ 95,000</td></tr>
-        <tr><td>Plan A operado por la clínica desde el mes 4</td><td class="num">S/ 52,250</td><td class="num">S/ 70,250</td></tr>
-        <tr><td>Plan B, mes a mes</td><td class="num">S/ 42,000</td><td class="num">S/ 102,000</td></tr>
-        <tr><td>Plan B con plan anual desde el mes 7</td><td class="num">S/ 40,800</td><td class="num">S/ 96,000</td></tr>
+        <tr><th>Escenario</th><th class="num">Primer año</th><th class="num hl">Tres años</th><th class="num">Propiedad del sistema</th></tr>
+        <tr><td>Plan A operado por la clínica desde el mes 4</td><td class="num">S/ 52,250</td><td class="num hl">S/ 70,250</td><td class="num">Sí</td></tr>
+        <tr><td>Plan A con operación y soporte anual</td><td class="num">S/ 56,300</td><td class="num hl">S/ 85,100</td><td class="num">Sí</td></tr>
+        <tr><td>Plan B, suscripción</td><td class="num">S/ 52,800</td><td class="num hl">S/ 122,400</td><td class="num">No</td></tr>
       </table>
     </div>
+    <div class="callout">A tres años, el Plan A representa un ahorro de entre <strong>S/ 37,300 y S/ 52,150</strong> frente al Plan B, y el sistema queda como un activo de la clínica.</div>
     <p class="footnote">Montos referenciales con IGV incluido. Para el Plan A operado por la clínica se estima un costo de S/ 750 mensuales en servidores, IA y mensajería, pagados directamente a cada proveedor.</p>
   </div>
 </section>
@@ -399,20 +414,21 @@
     <div class="faq">
       <details open>
         <summary>¿Cómo funciona el periodo de prueba?</summary>
-        <div class="body">Durante los tres primeros meses de operación se evalúan indicadores acordados al inicio del proyecto, como el porcentaje de citas agendadas por el chatbot, la tasa de confirmación de recordatorios y la reducción de inasistencias. En el Plan A coincide con la garantía y con el último pago. En el Plan B corresponde a la permanencia mínima.</div>
+        <div class="body">Durante los tres primeros meses de operación se evalúan indicadores acordados al inicio del proyecto, como el porcentaje de citas agendadas por el chatbot, la tasa de confirmación de recordatorios y la reducción de inasistencias. En el Plan A coincide con la garantía y se cubre dentro del cronograma de pagos. En el Plan B se realiza dentro del contrato mínimo de 12 meses.</div>
       </details>
       <details>
         <summary>Condiciones del Plan A – Desarrollo exclusivo</summary>
         <div class="body"><ul>
-          <li>El código fuente y los derechos de uso y modificación se transfieren a la clínica.</li>
+          <li>La clínica recibe el código fuente de su sistema, con derechos ilimitados de uso y modificación. El proveedor conserva la titularidad de los componentes genéricos y reutilizables de software.</li>
+          <li>La clínica puede elegir entre el pago por hitos o el pago en cuotas sin intereses; en ambos casos el monto total es el mismo.</li>
           <li>Durante los tres meses de prueba, el proveedor cubre servidores, IA y mensajería hasta 5,000 mensajes de WhatsApp al mes.</li>
-          <li>Desde el cuarto mes, la clínica puede contratar el plan de operación y soporte, u operar el sistema con sus propias cuentas.</li>
+          <li>Desde el cuarto mes, la clínica puede contratar el plan de operación y soporte (mensual o anual), u operar el sistema con sus propias cuentas.</li>
         </ul></div>
       </details>
       <details>
         <summary>Condiciones del Plan B – Servicio por suscripción</summary>
         <div class="body"><ul>
-          <li>Permanencia mínima de tres meses. Después, el servicio continúa mes a mes con aviso de cancelación de 30 días, o bajo plan anual.</li>
+          <li>Contrato mínimo de 12 meses. Después, el servicio continúa mes a mes con aviso de cancelación de 30 días.</li>
           <li>El código fuente pertenece al proveedor; la clínica cuenta con licencia de uso mientras el servicio esté vigente.</li>
           <li>La información de pacientes y citas es propiedad de la clínica y se entrega en formato exportable al término del servicio.</li>
           <li>La personalización se realiza mediante configuración. Los desarrollos a medida se cotizan por separado.</li>
